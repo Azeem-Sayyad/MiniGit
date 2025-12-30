@@ -64,6 +64,10 @@ def register():
 def features():
     return render_template("features.html")
 
+@app.route("/demo")
+def demo():
+    return render_template("demo.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
     

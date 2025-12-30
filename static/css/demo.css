@@ -1,0 +1,225 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* =========================
+   DEMO HERO SECTION
+========================= */
+.demo-hero {
+  min-height: 80vh;
+  padding: 140px 80px 80px;
+  text-align: center;
+  background: radial-gradient(circle at top, #00ffff22, #000);
+}
+
+.demo-hero h1 {
+  font-size: 56px;
+  color: cyan;
+}
+
+.demo-hero p {
+  margin-top: 16px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* =========================
+   STEPS FLOW
+========================= */
+.demo-steps {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step {
+  padding: 16px 28px;
+  border-radius: 30px;
+  background: rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px #00ffff55;
+}
+
+.arrow {
+  font-size: 22px;
+  opacity: 0.6;
+}
+
+/* =========================
+   ACCESS / BEFORE-AFTER SECTION
+========================= */
+.demo-access {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 0 20px;
+}
+
+/* CARDS */
+.access-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 36px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #061f1f, #000);
+  border: 1px solid #00ffff22;
+  transition: all 0.45s ease;
+  position: relative;
+}
+
+/* HEADINGS */
+.access-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+  color: #00ffff;
+}
+
+/* LIST ITEMS */
+.access-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.access-card li {
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #e0fefe;
+  position: relative;
+  padding-left: 26px;
+}
+
+.access-card li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: #00ffff;
+  font-size: 1.4rem;
+}
+
+/* HOVER EFFECT FOR CARDS */
+.access-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 0 90px #00ffff77;
+}
+
+/* BEFORE REGISTER – CALMER */
+.access-card.before {
+  opacity: 0.9;
+  box-shadow: 0 0 40px #00ffff33;
+}
+
+/* AFTER REGISTER – EMPHASIS */
+.access-card.after {
+  opacity: 1;
+  box-shadow: 0 0 60px #00ffff44;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 900px) {
+  .demo-access {
+    grid-template-columns: 1fr;
+  }
+}
+/* Custom Scrollbar (subtle & professional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, cyan, #00bcd4);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: cyan;
+}
+
+.demo-flow {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.flow-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flow-step {
+  background: rgba(0,255,255,0.15);
+  padding: 20px 28px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 0 30px #00ffff55;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.flow-step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 60px #00ffff77;
+}
+
+.flow-step .icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.flow-step p {
+  font-size: 16px;
+  color: #e0fefe;
+}
+
+.flow-arrow {
+  font-size: 28px;
+  color: #00ffff88;
+}
+/* =========================
+   CALL TO ACTION BUTTON
+========================= */
+.cta-section {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 36px;
+  color: #000;
+  background: #00ffff;
+  border-radius: 36px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 40px #00ffff77;
+  transition: all 0.4s;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}

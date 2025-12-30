@@ -133,6 +133,89 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+/* SERVICES */
+.services {
+  padding: 120px 80px;
+  text-align: center;
+  background: linear-gradient(180deg, #000, #020617);
+  position: relative;
+}
+
+.section-title {
+  font-size: 52px;
+  color: cyan;
+  letter-spacing: 1px;
+}
+
+.section-subtitle {
+  margin-top: 14px;
+  margin-bottom: 60px; /* FIX: prevents overlap */
+  font-size: 18px;
+  opacity: 0.75;
+}
+
+/* GRID */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  row-gap: 32px; /* subtle spacing */
+}
+
+/* CARD */
+.service-card {
+  background: linear-gradient(
+    180deg,
+    rgba(0,255,255,0.10),
+    rgba(0,0,0,0.55)
+  );
+  backdrop-filter: blur(18px);
+  padding: 55px 45px;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 1px rgba(0,255,255,0.15);
+  transition: all 0.45s cubic-bezier(.22,1,.36,1);
+  position: relative;
+  z-index: 1;
+}
+
+/* TEXT */
+.service-card h3 {
+  font-size: 22px;
+  color: cyan;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* PREMIUM HOVER */
+.service-card:hover {
+  transform: translateY(-14px) scale(1.035);
+  box-shadow:
+    0 25px 60px rgba(0,255,255,0.35),
+    inset 0 0 0 1px rgba(0,255,255,0.35);
+  z-index: 2;
+}
+
+/* SOFT GLOW EDGE */
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at top, rgba(0,255,255,0.25), transparent 60%);
+  opacity: 0;
+  transition: 0.4s ease;
+  pointer-events: none;
+}
+
+.service-card:hover::after {
+  opacity: 1;
+}
+
 /* STATS */
 .stats {
   padding: 100px 80px;
