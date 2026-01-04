@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MiniGit | Feedback</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/feedback.css') }}">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <div class="logo"></div>
+      <span>MiniGit</span>
+    </div>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="{{ url_for('features') }}">Features</a>
+      <a href="{{ url_for('demo') }}">Demo</a>
+      <a href="#">Privacy</a>
+      <a href="{{ url_for('help') }}">Help</a>
+      <a href="{{ url_for('feedback') }}">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="feedback-hero">
+    <h1>Product Feedback 📝</h1>
+    <p>Help improve MiniGit by reporting issues or suggesting improvements</p>
+  </section>
+
+  <!-- FEEDBACK FORM -->
+  <section class="feedback-section">
+    <form method="POST" class="feedback-card">
+
+      <h2>Submit Feedback</h2>
+
+      <label>Your Name</label>
+      <input type="text" name="name" placeholder="Enter your name" required>
+
+      <label>Feedback Category</label>
+      <select name="category" required>
+        <option value="">-- Select Category --</option>
+        <option>Bug / Issue</option>
+        <option>Repository Management</option>
+        <option>Performance</option>
+        <option>Feature Request</option>
+        <option>Documentation / Help</option>
+      </select>
+
+      <label>Experience Level</label>
+<div class="experience-buttons">
+  <input type="radio" id="poor" name="experience" value="Poor" required>
+  <label for="poor">Poor</label>
+
+  <input type="radio" id="fair" name="experience" value="Fair">
+  <label for="fair">Fair</label>
+
+  <input type="radio" id="good" name="experience" value="Good">
+  <label for="good">Good</label>
+
+  <input type="radio" id="excellent" name="experience" value="Excellent">
+  <label for="excellent">Excellent</label>
+</div>
+
+
+      <label>Your Message</label>
+      <textarea name="message" rows="4" placeholder="Describe your feedback..." required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>
+      <h3>MiniGit</h3>
+      <p>Lightweight repository management for students & teams.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('features') }}">Features</a>
+      <a href="{{ url_for('demo') }}">Demo</a>
+    </div>
+
+    <div>
+      <h4>Support</h4>
+      <a href="{{ url_for('help') }}">Help</a>
+      <a href="#">Privacy Policy</a>
+      <a href="{{ url_for('feedback') }}">Feedback</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>support@minigit.dev</p>
+    </div>
+  </footer>
+
+</body>
+</html>

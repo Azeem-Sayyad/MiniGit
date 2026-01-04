@@ -14,10 +14,12 @@ db = mysql.connector.connect(
 )
 cursor = db.cursor(dictionary=True)
 
+# HOME
 @app.route("/")
 def home():
     return render_template("index.html")
 
+# LOGIN
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -36,6 +38,7 @@ def login():
 
     return render_template("login.html")
 
+# REGISTER
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -60,14 +63,52 @@ def register():
 
     return render_template("register.html")
 
+# FEATURES
 @app.route("/features")
 def features():
     return render_template("features.html")
 
+# DEMO
 @app.route("/demo")
 def demo():
     return render_template("demo.html")
 
+# HELP
+@app.route("/help")
+def help():
+    return render_template("help.html")
+
+# PRIVACY
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html")
+
+@app.route("/feedback", methods=["GET", "POST"])
+def feedback():
+    if request.method == "POST":
+        name = request.form.get("name")
+        category = request.form.get("category")
+        experience = request.form.get("experience")
+        message = request.form.get("message")
+
+        try:
+            cursor = db.cursor()
+            cursor.execute(
+                "INSERT INTO feedback (name, category, experience, message) VALUES (%s, %s, %s, %s)",
+                (name, category, experience, message)
+            )
+            db.commit()
+            cursor.close()
+
+            flash("Thank you for your feedback!", "success")
+        except Exception as e:
+            db.rollback()
+            flash("Something went wrong. Please try again.", "error")
+            print(e)
+
+        return redirect(url_for("feedback"))
+
+    return render_template("feedback.html")
+   
 if __name__ == "__main__":
     app.run(debug=True)
-    

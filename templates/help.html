@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MiniGit | Help</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/help.css') }}">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <div class="logo"></div>
+      <span>MiniGit</span>
+    </div>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="{{ url_for('features') }}">Features</a>
+      <a href="{{ url_for('demo') }}">Demo</a>
+      <a href="#">Privacy</a>
+      <a href="{{ url_for('help') }}">Help</a>
+      <a href="{{ url_for('feedback') }}">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- HELP HERO -->
+  <section class="help-hero">
+    <h1>Need Help?</h1>
+    <p>Everything you need to know to use MiniGit smoothly</p>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="help-content">
+
+    <div class="faq-item">
+      <input type="checkbox" id="q1">
+      <label for="q1">
+        ❓ What is MiniGit?
+        <span class="arrow">⌄</span>
+      </label>
+      <div class="answer">
+        MiniGit is a lightweight repository management system designed for students
+        and small teams to manage projects easily without complex Git commands.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q2">
+      <label for="q2">
+        🔐 Do I need to register?
+        <span class="arrow">⌄</span>
+      </label>
+      <div class="answer">
+        Registration is required to create repositories, add commits, and view
+        activity logs. Demo and features can be viewed without registering.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q3">
+      <label for="q3">
+        📂 How do I create a repository?
+        <span class="arrow">⌄</span>
+      </label>
+      <div class="answer">
+        After logging in, go to the dashboard and click on "Create Repository".
+        Enter repository details and start managing your project.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q4">
+      <label for="q4">
+        📝 What is a commit?
+        <span class="arrow">⌄</span>
+      </label>
+      <div class="answer">
+        A commit represents a change or update made to a repository. It helps track
+        progress and maintain version history.
+      </div>
+    </div>
+
+    <div class="faq-item forgot-faq">
+      <input type="checkbox" id="q5">
+      <label for="q5">
+        ⚠️ Forgot password?
+        <span class="arrow">⌄</span>
+      </label>
+      <div class="answer">
+        Currently, password recovery is handled by the admin.
+        Please contact support for assistance.
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>
+      <h3>MiniGit</h3>
+      <p>Lightweight repository management for students & teams.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('features') }}">Features</a>
+      <a href="{{ url_for('demo') }}">Demo</a>
+    </div>
+
+    <div>
+      <h4>Support</h4>
+      <a href="{{ url_for('help') }}">Help</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Feedback</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>support@minigit.dev</p>
+    </div>
+  </footer>
+
+</body>
+</html>

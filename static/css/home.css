@@ -20,7 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(12px);
   z-index: 1000;
 }
@@ -52,13 +52,12 @@ body {
 .nav a {
   position: relative;
   padding-left: 14px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   transition: 0.3s;
 }
 
-
-.nav a::before {
+/* .nav a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -69,7 +68,7 @@ body {
   border-radius: 50%;
   transform: translateY(-50%) scale(0);
   transition: 0.3s;
-}
+} */
 
 .nav a:hover {
   color: cyan;
@@ -78,8 +77,6 @@ body {
 .nav a:hover::before {
   transform: translateY(-50%) scale(1);
 }
-
-
 
 .login {
   background: cyan;
@@ -126,7 +123,7 @@ body {
 .floating-card {
   width: 380px;
   height: 240px;
-  background: rgba(0,255,255,0.1);
+  background: rgba(0, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   border-radius: 20px;
   box-shadow: 0 0 50px #00ffff77;
@@ -166,14 +163,14 @@ body {
 .service-card {
   background: linear-gradient(
     180deg,
-    rgba(0,255,255,0.10),
-    rgba(0,0,0,0.55)
+    rgba(0, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.55)
   );
   backdrop-filter: blur(18px);
   padding: 55px 45px;
   border-radius: 26px;
-  box-shadow: inset 0 0 0 1px rgba(0,255,255,0.15);
-  transition: all 0.45s cubic-bezier(.22,1,.36,1);
+  box-shadow: inset 0 0 0 1px rgba(0, 255, 255, 0.15);
+  transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
   z-index: 1;
 }
@@ -194,9 +191,8 @@ body {
 /* PREMIUM HOVER */
 .service-card:hover {
   transform: translateY(-14px) scale(1.035);
-  box-shadow:
-    0 25px 60px rgba(0,255,255,0.35),
-    inset 0 0 0 1px rgba(0,255,255,0.35);
+  box-shadow: 0 25px 60px rgba(0, 255, 255, 0.35),
+    inset 0 0 0 1px rgba(0, 255, 255, 0.35);
   z-index: 2;
 }
 
@@ -206,7 +202,11 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(circle at top, rgba(0,255,255,0.25), transparent 60%);
+  background: radial-gradient(
+    circle at top,
+    rgba(0, 255, 255, 0.25),
+    transparent 60%
+  );
   opacity: 0;
   transition: 0.4s ease;
   pointer-events: none;
@@ -258,9 +258,15 @@ body {
 
 /* ANIMATION */
 @keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Custom Scrollbar (subtle & professional) */
