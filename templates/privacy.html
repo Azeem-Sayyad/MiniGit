@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy | MiniGit</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/privacy.css') }}">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+    <header class="header">
+    <div class="brand">
+      <div class="logo"></div>
+      <span>MiniGit</span>
+    </div>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="{{ url_for('demo') }}">Features</a>
+      <a href="{{ url_for('demo') }}">Demo</a>
+      <a href="#" class="active">Privacy</a>
+      <a href="{{ url_for('help') }}">Help</a>
+      <a href="{{ url_for('feedback') }}">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="privacy-hero">
+    <h1>Privacy Policy</h1>
+    <p>
+      Your privacy matters. This page explains how MiniGit collects,
+      uses, and protects your information.
+    </p>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="privacy-content">
+
+    <div class="privacy-card">
+      <h2>1. Information We Collect</h2>
+      <p>
+        MiniGit collects basic user information such as name, email address,
+        and login credentials to provide secure access to repositories and
+        collaboration features.
+      </p>
+    </div>
+
+    <div class="privacy-card">
+      <h2>2. How We Use Your Data</h2>
+      <p>
+        Collected data is used only to operate and improve the MiniGit platform,
+        including authentication, repository management, and activity tracking.
+      </p>
+    </div>
+
+    <div class="privacy-card">
+      <h2>3. Data Security</h2>
+      <p>
+        We implement industry-standard security measures to protect user data
+        from unauthorized access, alteration, or disclosure.
+      </p>
+    </div>
+
+    <div class="privacy-card">
+      <h2>4. Repository Privacy</h2>
+      <p>
+        Repositories created on MiniGit are accessible only to authorized users.
+        Private projects remain confidential unless explicitly shared.
+      </p>
+    </div>
+
+    <div class="privacy-card">
+      <h2>5. Cookies & Sessions</h2>
+      <p>
+        MiniGit uses session cookies strictly for authentication and maintaining
+        secure user sessions. No tracking cookies are used.
+      </p>
+    </div>
+
+    <div class="privacy-card">
+      <h2>6. Policy Updates</h2>
+      <p>
+        This privacy policy may be updated periodically. Continued use of the
+        platform implies acceptance of the revised policy.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>
+      <h3>MiniGit</h3>
+      <p>Lightweight repository management for modern development teams.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('features') }}">Features</a>
+      <a href="{{ url_for('demo') }}">Demo</a>
+    </div>
+
+    <div>
+      <h4>Support</h4>
+      <a href="{{ url_for('help') }}">Help</a>
+      <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+      <a href="{{ url_for('feedback') }}">Feedback</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>support@minigit.dev</p>
+    </div>
+  </footer>
+
+</body>
+</html>
